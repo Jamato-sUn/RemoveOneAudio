@@ -1,6 +1,7 @@
 #!/bin/bash
 #This script should remove one sound track from all files in supplied directory and rename originals afterwards.
-#Launch it like this "bash remove_one_soundtrack.sh /myfolder1/.../myVideofolder"
+#Launch it like this "bash remove_one_track.sh /myfolder1/.../myVideofolder"
+#You must know track ID.
 IFS=$';'
 directory="$1";
 echo "Hi. I am a script";
@@ -9,7 +10,7 @@ echo "I might rename something inside mkv container accidently"
 echo "I will create new files in $directory in pattern *.mkvnew and then replace old files with them by renaming new ones";
 echo "===================================================";
 ext="new"
-#after -a comes Japanese audiotrack ID. Video is track 1.
+#after -a comes bad audiotrack ID. Video is track 1.
    find "$@" -type f -name "*.mkv" | while read file; do
        echo $file;
        mkvmerge -o "$file$ext" -a 3 "$file";
