@@ -1,6 +1,6 @@
 #!/bin/bash
 #This script should remove one sound track from all files in supplied directory and rename originals afterwards.
-#Launch it like this "bash remove_one_track.sh /myfolder1/.../myVideofolder"
+#Launch it like this: bash remove_one_track.sh 3 "/myfolder1/.../myVideofolder"
 #You must know track ID.
 IFS=$';'
 directory="$2";
